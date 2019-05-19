@@ -1,0 +1,16 @@
+﻿PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+CONSTRUCT
+{
+    ?concept
+        a skos:Concept ;
+        ?p ?o .
+}
+WHERE
+{
+    VALUES ?concept { @conceptUri }
+
+    ?concept
+        a skos:Concept ;
+        ?p ?o .
+}

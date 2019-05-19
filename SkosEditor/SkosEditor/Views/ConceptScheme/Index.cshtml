@@ -1,0 +1,12 @@
+﻿@model SkosDynamicGraph
+
+<h1>Concept scheme</h1>
+@if (Model.ConceptSchemeCollection.Any())
+{
+    <ul>
+        @foreach(var conceptScheme in Model.ConceptSchemeCollection.OrderBy(x => x.PrefLabel.First().Value))
+        {
+            <li><a asp-action="Item" asp-route-id="@Model.GetId(conceptScheme)">@conceptScheme.PrefLabel.First().Value</a></li>
+        }
+    </ul>
+}

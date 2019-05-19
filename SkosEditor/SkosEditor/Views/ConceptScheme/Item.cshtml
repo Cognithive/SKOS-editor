@@ -1,0 +1,7 @@
+﻿@model SkosDynamicGraph
+@{
+    var scheme = @Model.ConceptSchemeCollection.FirstOrDefault();
+    ViewData["Title"] = scheme?.PrefLabel.First().Value;
+}
+
+<h1>@ViewData["Title"]</h1>
