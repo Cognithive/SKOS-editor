@@ -1,7 +1,6 @@
 ﻿namespace SkosEditor
 {
     using System.Collections.Generic;
-    using Microsoft.Extensions.Configuration;
     using VDS.RDF;
     using VDS.RDF.Dynamic;
 
@@ -11,8 +10,6 @@
             : base(node)
         {
         }
-
-        public ICollection<string> AltLabel => new DynamicObjectCollection<string>(this, "altLabel");
 
         public ICollection<Concept> Broader => new DynamicObjectCollection<Concept>(this, "broader");
 
